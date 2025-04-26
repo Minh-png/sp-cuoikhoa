@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Tickets</title>
+    <link rel="stylesheet" href="/assets/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>Movie Ticket Booking</h1>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="trangdatve.html">Book Tickets</a>
+        <a href="confirmation.html">Confirmation</a>
+      </nav>
+    </header>
+    <main>
+      <div class="form-container">
+        <h1>Book Your Tickets</h1>
+        <form action="/submit-booking" method="POST">
+          <label for="movie">Select Movie:</label>
+          <select id="movie" name="movie" required>
+            <option value="movie1">Movie 1</option>
+            <option value="movie2">Movie 2</option>
+            <option value="movie3">Movie 3</option>
+          </select>
+          <label for="date">Select Date:</label>
+          <input type="date" id="date" name="date" required />
+          <label for="time">Select Time:</label>
+          <select id="time" name="time" required>
+            <option value="10am">10:00 AM</option>
+            <option value="1pm">1:00 PM</option>
+            <option value="4pm">4:00 PM</option>
+            <option value="7pm">7:00 PM</option>
+          </select>
+          <label for="seats">Number of Tickets:</label>
+          <input
+            type="number"
+            id="seats"
+            name="seats"
+            min="1"
+            max="10"
+            required
+          />
+          <button type="submit">Book Now</button>
+        </form>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2023 Movie Ticket Booking. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>

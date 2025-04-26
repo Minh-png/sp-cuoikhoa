@@ -1,0 +1,49 @@
+<!-- filepath: c:\Users\LE HIEU MINH\Desktop\SPcuoikhoa\trangdangky.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="/assets/trangdangki.css" />
+    <style>
+      .home-button-container {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="home-button-container">
+      <button onclick="window.location.href='index.html'" type="button">
+        Home
+      </button>
+    </div>
+    <div class="form-container">
+      <h1>Register</h1>
+      <form action="/register" method="POST">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required />
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required />
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required />
+        <label for="confirm-password">Confirm Password:</label>
+        <input
+          type="password"
+          id="confirm-password"
+          name="confirm-password"
+          required
+        />
+        <button type="submit">Register</button>
+      </form>
+      <p>
+        Already have an account? <a href="trangdangnhap.html">Login here</a>.
+      </p>
+    </div>
+    <script src="./assets/trangdangki.js"></script>
+  </body>
+</html>

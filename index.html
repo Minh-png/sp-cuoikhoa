@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Ticket Booking</title>
+    <link rel="stylesheet" href="/assets/style.css" />
+    <style>
+      .auth-buttons {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+
+      .auth-buttons a {
+        text-decoration: none;
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+      }
+
+      .auth-buttons a:hover {
+        background-color: #0056b3;
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const loginButton = document.getElementById("login-button");
+        const currentUser = localStorage.getItem("currentUser");
+        if (currentUser) {
+          loginButton.textContent = "Log Out";
+          loginButton.href = "#";
+          loginButton.addEventListener("click", () => {
+            localStorage.removeItem("currentUser");
+            alert("You have been logged out.");
+            location.reload();
+          });
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <h1>Movie Ticket Booking</h1>
+      </div>
+      <nav>
+        <a href="../pages/home.html">Home</a>
+        <a href="trangdatve.html">Book Tickets</a>
+        <a href="../pages/confirmation.html">Confirmation</a>
+      </nav>
+      <div class="auth-buttons">
+        <a href="/trangdangnhap.html" id="login-button">Log In</a>
+      </div>
+    </header>
+    <main>
+      <div class="movie-gallery">
+        <div class="movie-card">
+          <img
+            src="path/to/movie1-image.jpg"
+            alt="Movie 1 Title"
+            class="movie-image"
+          />
+          <h2 class="movie-title">Movie 1 Title</h2>
+          <p class="movie-description">Description of Movie 1.</p>
+          <button class="book-ticket-button">Book Ticket</button>
+        </div>
+        <div class="movie-card">
+          <img
+            src="path/to/movie2-image.jpg"
+            alt="Movie 2 Title"
+            class="movie-image"
+          />
+          <h2 class="movie-title">Movie 2 Title</h2>
+          <p class="movie-description">Description of Movie 2.</p>
+          <button class="book-ticket-button">Book Ticket</button>
+        </div>
+        <div class="movie-card">
+          <img
+            src="path/to/movie3-image.jpg"
+            alt="Movie 3 Title"
+            class="movie-image"
+          />
+          <h2 class="movie-title">Movie 3 Title</h2>
+          <p class="movie-description">Description of Movie 3.</p>
+          <button class="book-ticket-button">Book Ticket</button>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <p>&copy; 2023 Movie Ticket Booking. All rights reserved.</p>
+
+        <a href="home.html">Home</a>
+        <a href="trangdatve.html">Booking</a>
+        <a href="confirmation.html">Confirmation</a>
+      </div>
+    </footer>
+  </body>
+</html>
